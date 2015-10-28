@@ -5,7 +5,7 @@
 // If you used to define your CONFIG_APM_HARDWARE setting here, it is no longer
 // valid! You should switch to using a HAL_BOARD flag in your local config.mk.
 
-//#define FRAME_CONFIG QUAD_FRAME
+#define FRAME_CONFIG HELI_FRAME
 /*  options:
  *  QUAD_FRAME
  *  TRI_FRAME
@@ -19,12 +19,12 @@
  */
 
 // uncomment the lines below to save on flash space if compiling for the APM using Arduino IDE.  Top items save the most flash space
-//#define LOGGING_ENABLED       DISABLED            // disable dataflash logging to save 11K of flash space
-//#define MOUNT                 DISABLED            // disable the camera gimbal to save 8K of flash space
+#define LOGGING_ENABLED       DISABLED            // disable dataflash logging to save 11K of flash space
+#define MOUNT                 DISABLED            // disable the camera gimbal to save 8K of flash space
 //#define AUTOTUNE_ENABLED      DISABLED            // disable the auto tune functionality to save 7k of flash
 //#define AC_FENCE              DISABLED            // disable fence to save 2k of flash
-//#define CAMERA                DISABLED            // disable camera trigger to save 1k of flash
-//#define CONFIG_SONAR          DISABLED            // disable sonar to save 1k of flash
+#define CAMERA                DISABLED            // disable camera trigger to save 1k of flash
+#define CONFIG_SONAR          DISABLED            // disable sonar to save 1k of flash
 //#define POSHOLD_ENABLED       DISABLED            // disable PosHold flight mode to save 4.5k of flash
 
 // features below are disabled by default on APM (but enabled on Pixhawk)
@@ -40,7 +40,7 @@
 
 // other settings
 //#define THROTTLE_IN_DEADBAND   100                // redefine size of throttle deadband in pwm (0 ~ 1000)
-//#define LAND_REQUIRE_MIN_THROTTLE_TO_DISARM   DISABLED    // when set to DISABLED vehicle will disarm after landing (in LAND mode or RTL) even if pilot has not put throttle to zero
+#define LAND_REQUIRE_MIN_THROTTLE_TO_DISARM   DISABLED    // when set to DISABLED vehicle will disarm after landing (in LAND mode or RTL) even if pilot has not put throttle to zero
 
 //#define HIL_MODE              HIL_MODE_SENSORS    // build for hardware-in-the-loop simulation
 
@@ -54,3 +54,7 @@
 //#define USERHOOK_MEDIUMLOOP userhook_MediumLoop();        // for code to be run at 10hz
 //#define USERHOOK_SLOWLOOP userhook_SlowLoop();            // for code to be run at 3.3hz
 //#define USERHOOK_SUPERSLOWLOOP userhook_SuperSlowLoop();  // for code to be run at 1hz
+
+#define SERIAL1_BAUD 9600
+#define SERIAL2_BAUD 9600
+#define FS_GCS FS_GCS_ENABLED_CONTINUE_MISSION

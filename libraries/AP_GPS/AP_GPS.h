@@ -29,7 +29,7 @@
 
 /**
    maximum number of GPS instances available on this platform. If more
-   than 1 then redundent sensors may be available
+   than 1 then redundant sensors may be available
  */
 #if HAL_CPU_CLASS > HAL_CPU_CLASS_16
 #define GPS_MAX_INSTANCES 2
